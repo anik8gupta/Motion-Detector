@@ -41,7 +41,7 @@ class VideoCamera(object):
                 if cv2.contourArea(contour) < 1000:
                     continue
                 (x, y, w, h) = cv2.boundingRect(contour)
-                cv2.rectangle(frame, (x,y), (x+w,y+h), (0, 255, 0), 3)
+                cv2.rectangle(frame, (x,y), (x+w,y+h), (0, 0, 255), 3)
 
             if ret:
                 ret, jpeg = cv2.imencode('.jpg', frame)
