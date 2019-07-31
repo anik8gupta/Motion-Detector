@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Streaming Video Recorder</title>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="../static/styles.css">
 </head>
 <body>
-  <h1>Streaming Video Recorder</h1>
+
+	<header>
+		<div class="container">
+		<h2>Motion Detection</h2>
+		<p class="brandname">Computer Vision App with Flask</p>
+		
+		
+		
+	</div>
+  </header>
+ 
+  <img id="video" src="{{ url_for('video_viewer') }}">
+  <br>
   <div id="recorder">
-    <button id="record">Record</button>
-    <button id="stop">Stop</button>
+    <button id="record" class="btn-info">Record</button>
+    <button id="stop" class="btn-info">Stop</button>
     <a id="download"></a>
     <script type="text/javascript" src="{{ url_for('static', filename='recorder.js') }}"></script>      
   </div>
-  <img id="video" src="{{ url_for('video_viewer') }}">
+  
 </body>
 </html>
